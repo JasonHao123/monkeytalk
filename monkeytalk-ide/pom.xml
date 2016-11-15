@@ -28,7 +28,8 @@
 		<repository>
 			<id>eclipse-kepler</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/kepler</url>
+			<!-- <url>http://download.eclipse.org/releases/kepler</url> -->
+			<url>http://mirrors.yun-idc.com/eclipse/releases/kepler</url>
 		</repository>
 	</repositories>
 

@@ -15,7 +15,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>. */
 
 #import <Foundation/Foundation.h>
-#import <SenTestingKit/SenTestingKit.h>
+//#import <SenTestingKit/SenTestingKit.h>
 #import "MonkeyTalk.h"
 
 @interface MonkeyTalk (OCUnit)

@@ -242,9 +242,27 @@ MonkeyTalk* theMonkey;
 
 + (NSObject<MTHTTPResponse> *)screenshotResponse {
     NSString *filePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/screenshot.png"];
-    CGImageRef imageRef = UIGetScreenImage();
-    UIImage *screenshot = [UIImage imageWithCGImage:imageRef];
-    CFRelease(imageRef);
+    
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(640, 960), YES, 0);
+    
+    //设置截屏大小
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    [keyWindow.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    CGImageRef imageRef = viewImage.CGImage;
+    CGRect rect = CGRectMake(0, 0, 641, 960);//这里可以设置想要截图的区域
+    
+    CGImageRef imageRefRect =CGImageCreateWithImageInRect(imageRef, rect);
+    UIImage *screenshot = [[UIImage alloc] initWithCGImage:imageRefRect];
+    
+    
+//    CGImageRef imageRef = nil;//UIGetScreenImage();
+//    UIImage *screenshot = [UIImage imageWithCGImage:imageRef];
+//    CFRelease(imageRef);
     NSData *imgData = UIImagePNGRepresentation(screenshot);
     
     // Write the file.  Choose YES atomically to enforce an all or none write. Use the NO flag if partially written files are okay which can occur in cases of corruption
