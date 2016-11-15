@@ -237,7 +237,6 @@
 		44EF56DD15A7878C00CA7581 /* MTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EF56DB15A7878C00CA7581 /* MTGlobal.m */; };
 		44EFC5E71575588E00AA42CF /* UISegmentedControl+MTReady.h in Headers */ = {isa = PBXBuildFile; fileRef = 44EFC5E51575588E00AA42CF /* UISegmentedControl+MTReady.h */; };
 		44EFC5E81575588E00AA42CF /* UISegmentedControl+MTReady.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EFC5E61575588E00AA42CF /* UISegmentedControl+MTReady.m */; };
-		44F35637161656DE00B994A4 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F35636161656DE00B994A4 /* libxml2.2.dylib */; };
 		44F356381616584400B994A4 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F35636161656DE00B994A4 /* libxml2.2.dylib */; };
 		44F356391616585500B994A4 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F35636161656DE00B994A4 /* libxml2.2.dylib */; };
 		44F3CEBC1423F5B800D3C408 /* MTConnectWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 44F3CEBA1423F5B800D3C408 /* MTConnectWebView.h */; };
@@ -781,7 +780,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44F35637161656DE00B994A4 /* libxml2.2.dylib in Frameworks */,
 				D34D967712231B1E001D0B47 /* CoreFoundation.framework in Frameworks */,
 				D34D967812231B1E001D0B47 /* CoreGraphics.framework in Frameworks */,
 				D34D967A12231B1E001D0B47 /* QuartzCore.framework in Frameworks */,
@@ -2181,6 +2179,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				FM_MINOR_VERSION = localbeta;
 				FM_VERSION = 1.0.40;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2197,7 +2196,10 @@
 					"\"$(SRCROOT)\"",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-llibxml",
+					"-ObjC",
+				);
 				PREBINDING = NO;
 				PRODUCT_NAME = MonkeyTalk;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
@@ -2210,6 +2212,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				FM_MINOR_VERSION = localbeta;
 				FM_VERSION = 1.0.40;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2225,6 +2228,10 @@
 					"\"$(SRCROOT)\"",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-llibxml",
+					"-ObjC",
+				);
 				PREBINDING = NO;
 				PRODUCT_NAME = MonkeyTalk;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
