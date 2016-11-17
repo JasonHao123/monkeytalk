@@ -55,7 +55,7 @@ import org.eclipse.ui.texteditor.AbstractDecoratedTextEditor;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.mortbay.log.Log;
+// import org.mortbay.log.Log;
 
 import com.gorillalogic.monkeyconsole.ADBHelper;
 import com.gorillalogic.monkeyconsole.componentview.ui.UIContainerView;
@@ -120,7 +120,7 @@ public class MonkeyTalkController {
 		try {
 			temp = new RecordServer();
 		} catch (IOException e) {
-			Log.warn("could not create RecordServer: " + e.getMessage());
+			// Log.warn("could not create RecordServer: " + e.getMessage());
 			temp = null;
 		}
 		recordServer = temp;
