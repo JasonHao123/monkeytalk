@@ -46,6 +46,8 @@ public class MonkeyApplication implements IApplication {
          return;
       final IWorkbench workbench = PlatformUI.getWorkbench();
       FoneMonkeyPlugin.getDefault().getController().stopRecordServer();
+      FoneMonkeyPlugin.getDefault().getController().stopProxyServer();
+      
       final Display display = workbench.getDisplay();
       display.syncExec(new Runnable() {
          public void run() {

@@ -84,7 +84,6 @@ public class FonemonkeyPreferencePage extends FieldEditorPreferencePage implemen
 				getFieldEditorParent()));
 		addField(new IntegerFieldEditor(PreferenceConstants.P_DEFAULTTIMEOUT, "Default Timeout:",
 				getFieldEditorParent()));
-
 		// Take screenshots after each command
 		takeAfterScreenshots = new BooleanFieldEditor(PreferenceConstants.P_TAKEAFTERSCREENSHOTS,
 				"Take screenshot after each command", getFieldEditorParent());

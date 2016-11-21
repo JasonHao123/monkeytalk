@@ -10,6 +10,16 @@
             name="MonkeyTalk Preferences">
       </page>
       <page
+            class="com.gorillalogic.monkeyconsole.preferences.ProxyServerPreferencePage"
+            id="com.gorillalogic.monkeyconsole.preferences.ProxyServerPreferencePage"
+            name="Proxy Settings" category="com.gorillalogic.monkeyconsole.preferences.FonemonkeyPreferencePage">
+      </page>
+      <page
+            class="com.gorillalogic.monkeyconsole.preferences.ProxyServerSSLPreferencePage"
+            id="com.gorillalogic.monkeyconsole.preferences.ProxyServerSSLPreferencePage"
+            name="SSL Proxying Settings" category="com.gorillalogic.monkeyconsole.preferences.FonemonkeyPreferencePage">
+      </page>
+      <page
             class="com.gorillalogic.monkeyconsole.preferences.CloudMonkeyAppliancePreferencePage"
             id="com.gorillalogic.monkeyconsole.preferences.CloudMonkeyAppliancePreferencePage"
             name="CloudMonkey Appliance Preferences">
@@ -20,9 +30,6 @@
       <initializer
             class="com.gorillalogic.monkeyconsole.preferences.PreferenceInitializer">
       </initializer>
-   </extension>
-   <extension
-         point="org.eclipse.core.runtime.preferences">
    </extension>
    <extension
          point="org.eclipse.ui.newWizards">
@@ -143,7 +150,7 @@
                name="aboutImage"
                value="icons/about.png">
          </property>
-         <property name="aboutText" value="MonkeyTalk IDE v1.0.63-SNAPSHOT (build 70) | Copyright 2012-2013 Gorilla Logic, Inc. | http://www.gorillalogic.com/monkeytalk">
+         <property name="aboutText" value="MonkeyTalk IDE v1.0.63-SNAPSHOT (dev) | Copyright 2012-2013 Gorilla Logic, Inc. | http://www.gorillalogic.com/monkeytalk">
          </property>
          <property
                name="windowImages"

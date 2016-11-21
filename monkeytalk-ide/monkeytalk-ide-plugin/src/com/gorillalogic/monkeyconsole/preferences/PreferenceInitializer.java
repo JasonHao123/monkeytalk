@@ -50,6 +50,9 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 		store.setDefault(PreferenceConstants.P_TAKEAFTERSCREENSHOTS, false);
 		store.setDefault(PreferenceConstants.P_TAKEERRORSCREENSHOTS, true);
 		store.setDefault(PreferenceConstants.P_THINKTIME, "500");
+		store.setDefault(PreferenceConstants.P_PROXY_SERVER_TYPE, "HTTP");
+		store.setDefault(PreferenceConstants.P_PROXY_SERVER_PORT, "7070");
+		
 		store.setDefault(PreferenceConstants.P_EVENTSTOFILTER, "touchdown, touchmove, touchup");
 		store.setDefault(PreferenceConstants.P_CLOUDUSR, "");
 		store.setDefault(PreferenceConstants.P_CLOUDPASS, "");

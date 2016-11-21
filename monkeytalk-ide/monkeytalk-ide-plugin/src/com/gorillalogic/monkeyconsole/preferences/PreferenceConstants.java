@@ -60,5 +60,13 @@ public class PreferenceConstants {
 	public static final String P_USE_PROXY_AUTHENTICATION = "cloudProxyAuthentication";
 	public static final String P_PROXY_USERNAME = "proxyUsername";
 	public static final String P_PROXY_PASSWORD = "proxyPassword";
+	
+	public static final String P_PROXY_SERVER_PORT = "proxyServerPort";
+	public static final String P_RECORD_SERVER_REQUEST = "recordServerRequest";
+	public static final String P_PROXY_SERVER_TYPE = "proxyServerType";
+	public static final String P_EXTERNAL_PROXY_SERVER_PORT = "externalProxyServerPort";
+	public static final String P_EXTERNAL_PROXY_SERVER_HOST = "externalProxyServerHost";
+	public static final String P_ENABLE_SSL_PROXY = "enableSSLProxy";
+	public static final String P_SSL_PROXY_LIST = "sslProxyList";
 
 }

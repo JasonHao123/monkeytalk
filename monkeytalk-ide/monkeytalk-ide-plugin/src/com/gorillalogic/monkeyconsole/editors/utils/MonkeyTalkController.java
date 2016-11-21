@@ -61,6 +61,7 @@ import com.gorillalogic.monkeyconsole.ADBHelper;
 import com.gorillalogic.monkeyconsole.componentview.ui.UIContainerView;
 import com.gorillalogic.monkeyconsole.plugin.FoneMonkeyPlugin;
 import com.gorillalogic.monkeyconsole.preferences.PreferenceConstants;
+import com.gorillalogic.monkeyconsole.server.ProxyServer;
 import com.gorillalogic.monkeyconsole.server.RecordServer;
 import com.gorillalogic.monkeyconsole.tableview.MonkeyTalkTabularEditor;
 import com.gorillalogic.monkeytalk.BuildStamp;
@@ -106,6 +107,7 @@ public class MonkeyTalkController {
 
 	Thread commandProcessorThread;
 	public final RecordServer recordServer;
+	public final ProxyServer proxyServer;
 	private boolean replayON = false;
 
 	// final String LICENSE =
@@ -117,13 +119,16 @@ public class MonkeyTalkController {
 		getRecordFilter().set(AutomatorConstants.TOUCH_UP, false);
 		getRecordFilter().set(AutomatorConstants.TOUCH_MOVE, false);
 		RecordServer temp;
+		ProxyServer ps = null;
 		try {
 			temp = new RecordServer();
+			ps = new ProxyServer();
 		} catch (IOException e) {
 			// Log.warn("could not create RecordServer: " + e.getMessage());
 			temp = null;
 		}
 		recordServer = temp;
+		proxyServer = ps;
 	}
 
 	public void stopRecordServer() {
@@ -1438,6 +1443,13 @@ public class MonkeyTalkController {
 		setHost(host);
 		connect(ConnectionTypesEnum.CLOUD_ANDROID);
 
+	}
+
+	public void stopProxyServer() {
+		// TODO Auto-generated method stub
+		if (proxyServer != null) {
+			proxyServer.stop();
+		}
 	}
 
 }

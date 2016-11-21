@@ -92,6 +92,21 @@
 	</build>
 
 	<dependencies>
+	<dependency>  
+    <groupId>xml-apis</groupId>  
+    <artifactId>xml-apis</artifactId>  
+    <version>1.4.01</version>  
+</dependency>  
+	<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>1.7.21</version>
+</dependency>
+		 <dependency>
+	        <groupId>net.lightbody.bmp</groupId>
+	        <artifactId>browsermob-core</artifactId>
+	        <version>2.1.2</version>
+	    </dependency>
 		<dependency>
 			<groupId>com.gorillalogic.monkeytalk</groupId>
 			<artifactId>monkeytalk-processor</artifactId>
